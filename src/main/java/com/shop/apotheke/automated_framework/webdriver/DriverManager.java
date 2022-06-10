@@ -37,10 +37,11 @@ public class DriverManager {
     }
    
     public static WebDriver getWebDriver(){
-        LOG.info("Returning default driver: chrome");
+        LOG.info("Returning set up driver");
         return driver;
     }
     public static void setWebDriver(WebDriver newDriver){
+        LOG.info("Adding reference to driver");
         driver = newDriver; 
     }
     public static void killDriver(){

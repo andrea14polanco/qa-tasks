@@ -11,20 +11,18 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeTest;
 
+import javax.swing.*;
+
 public abstract class BaseTest {
-    private static final Logger LOG = LoggerFactory.getLogger(BaseTest.class);
+    private static final String BROWSER = "chrome";
     @BeforeMethod
     public void setUp(Method method){
-        LOG.debug("starting this");
-        DriverManager.setWebDriver(DriverManager.startDriver("chrome"));
+        DriverManager.setWebDriver(DriverManager.startDriver(BROWSER));
         System.out.println(DriverManager.getWebDriver());
     }
     @AfterMethod
     public void tearDown(){
-        if(null != null){
-            //getDriver().close();
-            //getDriver().quit();
-        }
+        DriverManager.killDriver();
     }
     
 }
