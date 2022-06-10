@@ -1,6 +1,7 @@
 # Emacs/vim
 *~
 *.swp
+.idea/
 
 # VSCode
 
@@ -45,3 +46,4 @@ buildNumber.properties
 *.zip
 *.tar.gz
 *.rar
+/automated_framework/automated_framework.iml
