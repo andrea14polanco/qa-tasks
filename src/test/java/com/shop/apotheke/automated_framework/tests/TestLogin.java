@@ -1,5 +1,6 @@
 package com.shop.apotheke.automated_framework.tests;
 
+
 import com.shop.apotheke.automated_framework.BaseTest;
 
 import com.shop.apotheke.automated_framework.pages.LoginPage;
@@ -18,7 +19,7 @@ public class TestLogin extends BaseTest{
         account.NavigateToLogin();
         account.typeUserCredentials();
         UserPage userPage = new UserPage(driver);
-        String customerData = userPage.getCustomerData();
+        String customerData =" userPage.getCustomerData();";
         Assert.assertEquals("Customer number 19236690", customerData,"Customer Number");
     }
 

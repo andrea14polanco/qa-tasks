@@ -1,9 +1,11 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="LoginTS">
-    <test name="testValidlogin">
-        <classes>
-            <class name="LoginTests" />
-        </classes>
+
+<suite name="UI Test Suite" thread-count="1">
+    <test name="UI Test">
+        <packages>
+            <package name="com.shop.apotheke.automated_framework.tests" />
+        </packages>
     </test>
+
 </suite>
