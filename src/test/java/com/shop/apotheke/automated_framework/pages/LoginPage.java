@@ -29,6 +29,7 @@ public class LoginPage extends BasePage<LoginPage>{
         writeText(inptPassword, user);
     }
 
+
     public void login(){
         click(btnLogin);
     }
