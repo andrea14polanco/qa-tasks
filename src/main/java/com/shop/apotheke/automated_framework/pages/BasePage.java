@@ -27,4 +27,11 @@ public class BasePage<T extends BasePage<T>> extends LoadableComponent<BasePage<
         driver.get(url);
     }
 
+    protected void click(By elementBy) {
+        driver.findElement(elementBy).click();
+    }
+    protected String getTextFromElement(By elementBy) {
+        return driver.findElement(elementBy).getText();
+    }
+
 }

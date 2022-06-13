@@ -7,6 +7,7 @@ import org.openqa.selenium.WebDriver;
 public class LoginPage extends BasePage<LoginPage>{
     By inptEmail = By.id("login-email");
     By inptPassword = By.id("login-password");
+    By btnLogin = By.id("btn-login");
 
 
     public LoginPage(WebDriver driver) {
@@ -26,5 +27,9 @@ public class LoginPage extends BasePage<LoginPage>{
     public void typeUserCredentials(String user , String password) {
         writeText(inptEmail, user);
         writeText(inptPassword, user);
+    }
+
+    public void login(){
+        click(btnLogin);
     }
 }
