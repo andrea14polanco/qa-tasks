@@ -35,9 +35,9 @@ public class TestLogin extends BaseTest{
         wait.until(ExpectedConditions.elementToBeClickable( By.id("login-submit-btn")));
         account.login();
         UserPage userPage = new UserPage(driver);
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("//font/*[contains(text(),'Customer')]")));
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@class='u-color--grey a-h6 u-no-margin']")));
         String customerData =userPage.getCustomerData();
-        Assert.assertEquals("Customer number 19236690", customerData,"Customer Number");
+        Assert.assertEquals(customerData,"Kundennummer 19236690", "Customer Number");
     }
 
     @Test

@@ -4,7 +4,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
 public class UserPage extends BasePage<UserPage>{
-    By lblCustomerNo = By.xpath("//font/*[contains(text(),'Customer')]");
+    By lblCustomerNo = By.xpath("//*[@class='u-color--grey a-h6 u-no-margin']");
 
     public UserPage(WebDriver driver) {
         super(driver);
