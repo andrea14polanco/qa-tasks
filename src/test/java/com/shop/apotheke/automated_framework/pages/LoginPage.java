@@ -5,16 +5,17 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
 public class LoginPage extends BasePage<LoginPage>{
-    By inptEmail = By.id("login-email");
-    By inptPassword = By.id("login-password");
-    By btnLogin = By.id("btn-login");
+    By inptEmail = By.id("loginForm-eMail");
+    By inptPassword = By.id("loginForm-password");
+    By btnRegister = By.id("btn-login");
+    By btnLogin = By.id("login-submit-btn");
 
 
     public LoginPage(WebDriver driver) {
         super(driver);
     }
 
-    public void NavigateToLogin() {
+    public void navigateToLogin() {
         goTo(ConfigurationManager.getInstance().getKey("url"));
     }
 
@@ -26,10 +27,13 @@ public class LoginPage extends BasePage<LoginPage>{
 
     public void typeUserCredentials(String user , String password) {
         writeText(inptEmail, user);
-        writeText(inptPassword, user);
+        writeText(inptPassword, password);
     }
 
 
+    public void clickResgiterButton(){
+        click(btnRegister);
+    }
     public void login(){
         click(btnLogin);
     }

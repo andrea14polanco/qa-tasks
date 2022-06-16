@@ -16,17 +16,19 @@ public class TestLogin extends BaseTest{
     public void testLoginWithValidCredentials(){
         WebDriver driver = DriverManager.getWebDriver();
         LoginPage account = new LoginPage(driver);
-        account.NavigateToLogin();
+        account.navigateToLogin();
+        account.clickResgiterButton();
         account.typeUserCredentials();
+        account.login();
         UserPage userPage = new UserPage(driver);
-        String customerData =" userPage.getCustomerData();";
+        String customerData =userPage.getCustomerData();
         Assert.assertEquals("Customer number 19236690", customerData,"Customer Number");
     }
 
     @Test
-    public void testUserwWithInvalidCredentials(){
+    public void testUserWithInvalidCredentials(){
         LoginPage account = new LoginPage(DriverManager.getWebDriver());
-        account.NavigateToLogin();
+        account.navigateToLogin();
         // Add assert to check if user is on login page or not
         account.typeUserCredentials("lol","lol");
         account.login();

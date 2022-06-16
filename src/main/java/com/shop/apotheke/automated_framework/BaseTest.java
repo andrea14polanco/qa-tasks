@@ -14,10 +14,9 @@ import org.testng.annotations.BeforeTest;
 import javax.swing.*;
 
 public abstract class BaseTest {
-    private static final String BROWSER = "chrome";
     @BeforeMethod
     public void setUp(Method method){
-        DriverManager.setWebDriver(DriverManager.startDriver(BROWSER));
+        DriverManager.setWebDriver(DriverManager.startDriver(ConfigurationManager.getInstance().getKey("browser")));
         System.out.println(DriverManager.getWebDriver());
     }
     @AfterMethod
