@@ -17,7 +17,7 @@ public abstract class BaseTest {
     @BeforeMethod
     public void setUp(Method method){
         DriverManager.setWebDriver(DriverManager.startDriver(ConfigurationManager.getInstance().getKey("browser")));
-        System.out.println(DriverManager.getWebDriver());
+
     }
     @AfterMethod
     public void tearDown(){
