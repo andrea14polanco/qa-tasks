@@ -68,12 +68,17 @@ Below is the list of automated tests
  Test Step  | Expected Result
 ------------- | -------------
 1. Navigate to https://www.shop-apotheke.com/nl/login.htm   | **Anmelden** button should be shown
+------------- | -------------
 2. Click on **Anmelden** button | User should be taken to the actual login page
+------------- | -------------
 3. Type valid user email  | Email text should be displayed on screen
+------------- | -------------
 4. Type valid user password | Password should be masked and displayed on screen
+------------- | -------------
 5. Wait for human verification to be done | Log in button should get enabled
+------------- | -------------
 6. Click on **Anmelden** button | User data should shown. User was able to login to apotheke web
-
+------------- | -------------
 
 Note: others tests cases are highlighted on test plan section
 ## III - Code challenge 
@@ -97,6 +102,7 @@ Note: Just first item found will be written as if it was part of a bug report
 Test Step  | Expected Result
 ------------- | -------------
 1. Navigate to https://www.shop-apotheke.com/nl/login.htm   | **Anmelden** button should be shown
+------------- | -------------
 2. Click on **Anmelden** button | User should be taken to the actual login page
 3. Type 10000 characters on email input  | Email input should not allow user to type what amount of characters
 - UX perspective: When trying to log in it takes to a new screen where I can either log in or create a new account this is ok for new users but for existing users might being tedious following flow since prob they just have one mistake in their password and would like to know that asap
