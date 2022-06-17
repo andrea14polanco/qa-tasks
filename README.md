@@ -30,9 +30,9 @@ This repo contains the answers of the challenges set up by the examiner
  + **Entry and Exit criteria:**
     + Entry criteria:
       * All test deliveries should be ready
-      * Business Requirements are undertood and analized by the team
+      * Business Requirements are understood and analyzed by the team
     + Exit criteria:
-      * 70% of highest priority tests cases should pass
+      * 70% of top priority tests cases should pass
       * Not major (showstopper) bugs has been found
  + **Test Automation:** 
     + Features to be tested:
@@ -44,10 +44,13 @@ This repo contains the answers of the challenges set up by the examiner
 
 ## II - Detailed test case
 ## III - Code challenge 
-- How to use the frame work
+- How to use the framework
+- 
 - Requirements
+  - Have installed java 1.8 version
+  - Have installed maven
 ## IV - Findings 
-- There is not limit in the amount of characters that can be added to each input box (just for email field)
+- There is no limit in the amount of characters that can be added to each input box (just for email field)
 - From UX perspective: Eyes icon is not getting opened when leeter a showing (TOOLTIP saying hide or not) or text
 - When trying to login it takes to a new screen where I can either login or create a new account this is ok for new users but for existing users might being tedious following flow since prob they just have one mistake in their password and would like to know that asap
 - Data is not being passed from one page to the other

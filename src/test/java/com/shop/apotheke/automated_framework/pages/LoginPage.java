@@ -2,10 +2,12 @@ package com.shop.apotheke.automated_framework.pages;
 
 import com.shop.apotheke.automated_framework.utils.ConfigurationManager;
 import org.openqa.selenium.By;
+import org.openqa.selenium.SearchContext;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
-import java.util.concurrent.TimeUnit;
+import java.time.Duration;
+
 
 public class LoginPage extends BasePage<LoginPage>{
     By inputEmail = By.id("loginForm-eMail");
@@ -58,15 +60,15 @@ public class LoginPage extends BasePage<LoginPage>{
     }
     public void typeUserCredentials(String user , String password) throws InterruptedException {
         writeText(inputEmail, user);
-        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
         writeText(inputPassword, password);
-        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(60));
 
     }
     public void acceptCookies(){
-        WebElement root1 = driver.findElement(shadowRoot);
-        WebElement shadow_root1 = expandRootElement(root1);
-        shadow_root1.findElement(cookies).click();
+        WebElement root = driver.findElement(shadowRoot);
+        SearchContext shadowRoot = expandRootElement(root);
+        shadowRoot.findElement(cookies).click();
     }
     public void clickRegisterButton(){
         click(btnRegister);
@@ -78,7 +80,6 @@ public class LoginPage extends BasePage<LoginPage>{
     public void waitForLoginBtn(){
         waitElementToBeVisible(btnLogin);
     }
-
     public boolean isErrorBannerPresent() {
         return isElementPresent(errorBanner);
     }
