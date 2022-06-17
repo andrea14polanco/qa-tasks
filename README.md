@@ -32,7 +32,7 @@ This repo contains the answers of the challenges set up by the examiner
     - TC06- Verify user is not able to log in with malformed email
     - TC07- Verify user is able to log in after performing log out action
     - TC08- Verify email input field contains a limit amount of characters
-    n- TC09- Verify color palette for login button is according apotheke standards and desig
+    - TC09- Verify color palette for login button is according apotheke standards and desig
     - TC010- Verify warning/error banners when error is trigger
   * Test Scripts (automation): 
 Below is the list of automated tests
@@ -65,8 +65,7 @@ Below is the list of automated tests
   * user = alpm9615+testapotheke@gmail.com 
   * password = Test123@
 
-
-Test Step  | Expected Result
+ Test Step  | Expected Result
 ------------- | -------------
 1. Navigate to https://www.shop-apotheke.com/nl/login.htm   | **Anmelden** button should be shown
 2. Click on **Anmelden** button | User should be taken to the actual login page
