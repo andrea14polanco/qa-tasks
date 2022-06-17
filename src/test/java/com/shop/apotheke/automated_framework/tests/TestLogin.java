@@ -26,9 +26,9 @@ public class TestLogin extends BaseTest{
 
         loginPage.waitForLoginBtn();
 
-        loginPage.acceptCookies();
-
         loginPage.typeUserCredentials();
+
+        loginPage.acceptCookies();
 
         loginPage.login();
 
@@ -54,9 +54,9 @@ public class TestLogin extends BaseTest{
 
         loginPage.waitForLoginBtn();
 
-        loginPage.acceptCookies();
-
         loginPage.typeUserCredentials("DummyUser@dumb.com", "DummyPass");
+
+        loginPage.acceptCookies();
 
         loginPage.login();
 
@@ -78,9 +78,9 @@ public class TestLogin extends BaseTest{
 
         loginPage.waitForLoginBtn();
 
-        loginPage.acceptCookies();
-
         loginPage.typeUserCredentials("", "");
+
+        loginPage.acceptCookies();
 
         loginPage.login();
 
@@ -104,9 +104,9 @@ public class TestLogin extends BaseTest{
 
         loginPage.waitForLoginBtn();
 
-        loginPage.acceptCookies();
-
         loginPage.typeUserCredentials("Test", "nothing");
+
+        loginPage.acceptCookies();
 
         loginPage.login();
 
