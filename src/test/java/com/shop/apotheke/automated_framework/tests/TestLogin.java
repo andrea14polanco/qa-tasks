@@ -78,7 +78,7 @@ public class TestLogin extends BaseTest{
 
         loginPage.waitForLoginBtn();
 
-        loginPage.typeUserCredentials("", "");
+        loginPage.typeUserCredentials("  ", "");
 
         loginPage.acceptCookies();
 
