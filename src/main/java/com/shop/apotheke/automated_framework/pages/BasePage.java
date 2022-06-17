@@ -25,10 +25,9 @@ public class BasePage<T extends BasePage<T>> extends LoadableComponent<BasePage<
     protected void load() {
         driver.navigate().refresh();
     }
-
     @Override
     protected void isLoaded() throws Error {
-
+    //TODO: implement
     }
     protected void writeText(By elementBy, String text) {
         driver.findElement(elementBy).sendKeys(text);
@@ -54,12 +53,9 @@ public class BasePage<T extends BasePage<T>> extends LoadableComponent<BasePage<
     protected String getTextFromElement(By elementBy) {
         return driver.findElement(elementBy).getText();
     }
-
     protected WebElement waitElementToBeVisible(By locator){
        return wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
     }
-
-
     protected  void waitElementToBeClickable(By locator){
         wait.until(ExpectedConditions.elementToBeClickable(locator));
     }

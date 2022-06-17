@@ -15,10 +15,6 @@ public class DriverManager {
     
     static WebDriver driver;
 
-
-    DriverManager(String browser){
-
-    }
     public static WebDriver startDriver(String browser){
         switch(browser){
             case "firefox":
@@ -31,8 +27,8 @@ public class DriverManager {
             default:
                 WebDriverManager.chromedriver().setup();
                 ChromeOptions chromeOptions = new ChromeOptions();
-               // chromeOptions.setExperimentalOption("excludeSwitches", new String[]{"enable-automation"});
                 chromeOptions.setExperimentalOption("useAutomationExtension", false);
+                //Help with captcha
                 chromeOptions.addArguments("--disable-blink-features=AutomationControlled");
 
                 chromeOptions.addArguments("--window-size=1200,800");

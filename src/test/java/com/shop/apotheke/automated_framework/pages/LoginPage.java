@@ -18,6 +18,7 @@ public class LoginPage extends BasePage<LoginPage>{
     By errorBannerPassword = By.xpath("(//*[text()='Please fill out this field.'])[2]");
     By errorBannerEmailFormat = By.xpath("//*[text()=\"Please include an '@' in the email address. \"]");
     By shadowRoot = By.id("usercentrics-root");
+    //TODO: fix this selector
     By cookies = By.cssSelector("#focus-lock-id > div > div > div.sc-bYoBSM.hrDdPG > div > div > div.sc-dlVxhl.bEDIID > div > button.sc-gsDKAQ.dZIwB");
 
     public By getInputEmail() {
