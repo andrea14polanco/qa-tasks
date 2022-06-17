@@ -31,11 +31,11 @@ public class DriverManager {
             default:
                 WebDriverManager.chromedriver().setup();
                 ChromeOptions chromeOptions = new ChromeOptions();
-                chromeOptions.setExperimentalOption("excludeSwitches", new String[]{"enable-automation"});
+               // chromeOptions.setExperimentalOption("excludeSwitches", new String[]{"enable-automation"});
                 chromeOptions.setExperimentalOption("useAutomationExtension", false);
                 chromeOptions.addArguments("--disable-blink-features=AutomationControlled");
 
-                chromeOptions.addArguments("--window-size=800,600");
+                chromeOptions.addArguments("--window-size=1200,800");
                 chromeOptions.addArguments("incognito");
                 driver = new ChromeDriver(chromeOptions);
                 break;
